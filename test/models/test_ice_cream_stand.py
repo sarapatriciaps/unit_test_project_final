@@ -33,7 +33,7 @@ def test_find_flavor_not_available():
     assert ice_cream_stand.find_flavor(flavor) == f"Não temos no momento {flavor}!"
 
 
-# checking add valid flavor - add_flavor()
+# got add valid flavor - add_flavor()
 def test_add_new_flavor():
     flavors = ["Cookies", "Pistache"]
     ice_cream = IceCreamStand("Frisabor", "Sorvetes", flavors)
@@ -58,5 +58,5 @@ def test_add_invalid_flavor():
     flavors = ["Cookies", "Pistache", "Coconut"]
     ice_cream_stand = IceCreamStand("Frisabor", "Sorvetes", flavors)
     flavor_empty = []
-    expected_output = "Sabor invalido!"
-    assert ice_cream_stand.add_flavor(flavor_empty) == expected_output
+    expected = "Sabor invalido!"
+    assert ice_cream_stand.add_flavor(flavor_empty) == expected
