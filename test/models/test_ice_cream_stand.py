@@ -11,12 +11,13 @@ def test_list_flavor_available():
 
 
 # checking empty list - flavors_available()
-def test_list_flavor_in_empty_list_ice_cream_():
+def test_list_flavor_in_empty_list_ice_cream():
     ice_cream = IceCreamStand("Frisabor", "Sorvetes", [])
     expected = ice_cream.flavors_available()
     assert expected == []
 
 
+# checking available flavor - find_flavor()
 def test_find_flavor_available():
     flavors = ["Cookies", "Pistache"]
     ice_cream_stand = IceCreamStand("Frisabor", "Sorvetes", flavors)
@@ -24,6 +25,7 @@ def test_find_flavor_available():
     assert ice_cream_stand.find_flavor(flavor) == f"Temos no momento {flavor}!"
 
 
+# checking unavailable flavor - find_flavor()
 def test_find_flavor_not_available():
     flavors = ["Cookies", "Pistache"]
     ice_cream_stand = IceCreamStand("Frisabor", "Sorvetes", flavors)

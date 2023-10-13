@@ -15,6 +15,7 @@ class IceCreamStand(Restaurant):
 
     # [Bug]Add return
     # [Bug]Inclusao do 'append' para armazenar sabores em lista
+    # [Melhoria] Mensagem de retorno para 'flavor' invalido
     def flavors_available(self):
         """Percorra a lista de sabores disponíveis e imprima."""
         if self.flavors:

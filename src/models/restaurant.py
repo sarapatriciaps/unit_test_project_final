@@ -7,10 +7,15 @@ class Restaurant:
         self.number_served = 0
         self.open = False
 
+    # [Bug] - Nome do restaurante usa o parametro self.restaurant_name e nao o self.cuisine_type
+    # [Bug] - Add return
+    # [Melhoria] - Ajuste nas mensagens dos prints e return
+    # [Melhoria] - Concatenacao das mensagens no return
     def describe_restaurant(self):
         """Imprima uma descrição simples da instância do restaurante."""
-        print(f"Esse restaturante chama {self.cuisine_type} and serve {self.cuisine_type}.")
-        print(f"Esse restaturante está servindo {self.number_served} consumidores desde que está aberto.")
+        print(f"Esse restaurante chama {self.restaurant_name} e serve pratos {self.cuisine_type}.")
+        print(f"Esse restaurante está servindo {self.number_served} consumidores desde que está aberto.")
+        return f"Esse restaurante chama {self.restaurant_name} e serve pratos {self.cuisine_type}.\n Esse restaurante está servindo {self.number_served} consumidores desde que está aberto."
 
     def open_restaurant(self):
         """Imprima uma mensagem indicando que o restaurante está aberto para negócios."""
